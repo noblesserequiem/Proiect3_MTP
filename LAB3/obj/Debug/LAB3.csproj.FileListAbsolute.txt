@@ -9,3 +9,4 @@ C:\Users\Student\Desktop\LAB3\LAB3\bin\Debug\LAB3.pdb
 C:\Users\Student\Desktop\LAB3\LAB3\obj\Debug\LAB3.exe
 C:\Users\Student\Desktop\LAB3\LAB3\obj\Debug\LAB3.pdb
 C:\Users\Student\Desktop\LAB3\LAB3\obj\Debug\LAB3.Form2.resources
+C:\Users\Student\Desktop\LAB3\LAB3\obj\Debug\LAB3.Form3.resources

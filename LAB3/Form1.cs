@@ -21,6 +21,8 @@ namespace LAB3
         {
             InitializeComponent();
             Directory.CreateDirectory("D:\\LPF");
+            Form3 f3 = new Form3();
+            f3.ShowDialog();
             
         }
 
@@ -55,12 +57,17 @@ namespace LAB3
 
         private void AfisareJucatori(object sender, EventArgs e)
         {
-            
+
             foreach (String path in Directory.EnumerateFiles("D:\\LPF\\" + comboBox1.SelectedItem.ToString(), "*.lpf"))
             {
                 StreamReader reader = new StreamReader(path);
                 String nume_juc = reader.ReadLine();
                 Button btn = new Button();
+                String post_str = reader.ReadLine();
+                var post = (Post)Enum.Parse(typeof(Post), post_str);
+
+                Jucator jucator = new Jucator(nume_juc, Path.GetFileNameWithoutExtension(path), post);
+                btn.Tag = jucator;
                 btn.Text = nume_juc;
                 btn.Width = 200;
                 
@@ -73,7 +80,9 @@ namespace LAB3
         private void Btn_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            Jucator j = (Jucator)btn.Tag;
+            Jucator j = (Jucator)btn.Tag;            textBox1.Text = j.Nume;
+            textBox2.Text = j.Post;
+            textBox3.Text = j.Cnp;
         }
     }
 }

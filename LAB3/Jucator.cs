@@ -17,7 +17,12 @@ namespace LAB3
             this.cnp = cnp;
             this.post_jucator = post;
         }
-
+        public String Nume
+        { get { return this.nume; } }
+        public String Cnp
+        { get { return this.cnp;  } }
+        public String Post
+        { get { return this.post_jucator.ToString(); } }
         
     }
     enum Post : int
